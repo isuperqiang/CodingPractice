@@ -11,6 +11,5 @@ public class TestCast {
         System.out.println("ret:" + ret);
 
         System.out.println(1+2+3.0);
-        //Math.random()
     }
 }
