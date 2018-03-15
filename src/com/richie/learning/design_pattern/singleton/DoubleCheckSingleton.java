@@ -5,12 +5,12 @@ package com.richie.learning.design_pattern.singleton;
  * 双重校验锁，多线程安全，延迟初始化
  */
 public class DoubleCheckSingleton {
-    private volatile DoubleCheckSingleton instance;
+    private volatile static DoubleCheckSingleton instance;
 
     private DoubleCheckSingleton() {
     }
 
-    public DoubleCheckSingleton getInstance() {
+    public static DoubleCheckSingleton getInstance() {
         if (instance == null) {
             synchronized (DoubleCheckSingleton.class) {
                 if (instance == null) {
@@ -19,5 +19,9 @@ public class DoubleCheckSingleton {
             }
         }
         return instance;
+    }
+
+    public void doSomething() {
+        System.out.println("I am " + getClass().getSimpleName());
     }
 }

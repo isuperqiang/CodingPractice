@@ -13,4 +13,8 @@ public class HungrySingleton {
     public static HungrySingleton getInstance() {
         return instance;
     }
+
+    public void doSomething() {
+        System.out.println("I am " + getClass().getSimpleName());
+    }
 }

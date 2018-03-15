@@ -6,4 +6,8 @@ package com.richie.learning.design_pattern.singleton;
  */
 public enum EnumSingleton {
     INSTANCE;
+
+    public void doSomething() {
+        System.out.println("I am " + getClass().getSimpleName());
+    }
 }
