@@ -6,7 +6,7 @@ package com.richie.learning.design_pattern.template_method;
 public abstract class CoffeineBeverage {
 
     /**
-     * 模版方法，不允许子类覆盖
+     * 模板方法，不允许子类覆盖
      */
     public final void prepareRecipe() {
         boilWater();
