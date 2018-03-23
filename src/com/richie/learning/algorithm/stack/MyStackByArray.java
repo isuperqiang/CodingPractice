@@ -6,18 +6,18 @@ import java.util.Iterator;
 
 /**
  * @author Richie on 2018.03.21
- * 栈：后进先出
+ * 栈：后进先出。由数组实现
  */
-public class MyStack<E> implements Iterable<E> {
+public class MyStackByArray<E> implements Iterable<E> {
 
     private E[] mData;
     private int size;
 
-    public MyStack() {
+    public MyStackByArray() {
         this(8);
     }
 
-    public MyStack(int size) {
+    public MyStackByArray(int size) {
         mData = (E[]) new Object[size];
     }
 
@@ -60,7 +60,7 @@ public class MyStack<E> implements Iterable<E> {
 
     @Override
     public String toString() {
-        return "MyStack{" +
+        return "Stack{" +
                 "data=" + Arrays.toString(mData) +
                 ", size=" + size +
                 '}';
@@ -83,6 +83,5 @@ public class MyStack<E> implements Iterable<E> {
         public E next() {
             return mData[index++];
         }
-
     }
 }
