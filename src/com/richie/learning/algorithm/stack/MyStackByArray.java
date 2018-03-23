@@ -10,7 +10,7 @@ import java.util.Iterator;
  */
 public class MyStackByArray<E> implements Iterable<E> {
 
-    private E[] mData;
+    private E[] data;
     private int size;
 
     public MyStackByArray() {
@@ -18,31 +18,31 @@ public class MyStackByArray<E> implements Iterable<E> {
     }
 
     public MyStackByArray(int size) {
-        mData = (E[]) new Object[size];
+        data = (E[]) new Object[size];
     }
 
-    public void push(E data) {
-        if (size == mData.length) {
+    public void push(E element) {
+        if (size == data.length) {
             // 扩容
-            int newLength = size * 2 + 1;
+            int newLength = 2 * size + 1;
             Object[] dest = new Object[newLength];
-            System.arraycopy(mData, 0, dest, 0, mData.length);
-            mData = (E[]) dest;
+            System.arraycopy(data, 0, dest, 0, size);
+            data = (E[]) dest;
         }
-        mData[size++] = data;
+        data[size++] = element;
     }
 
     public E pop() {
         if (size > 0) {
-            E datum = mData[--size];
+            E datum = data[--size];
             // 避免对象游离
-            mData[size] = null;
-            if (size == mData.length / 4) {
-                int newLength = mData.length / 2;
+            data[size] = null;
+            if (size == data.length / 4) {
+                int newLength = data.length / 2;
                 // 减容
                 Object[] dest = new Object[newLength];
-                System.arraycopy(mData, 0, dest, 0, newLength);
-                mData = (E[]) dest;
+                System.arraycopy(data, 0, dest, 0, newLength);
+                data = (E[]) dest;
             }
             return datum;
         } else {
@@ -61,7 +61,7 @@ public class MyStackByArray<E> implements Iterable<E> {
     @Override
     public String toString() {
         return "Stack{" +
-                "data=" + Arrays.toString(mData) +
+                "data=" + Arrays.toString(data) +
                 ", size=" + size +
                 '}';
     }
@@ -81,7 +81,7 @@ public class MyStackByArray<E> implements Iterable<E> {
 
         @Override
         public E next() {
-            return mData[index++];
+            return data[index++];
         }
     }
 }
