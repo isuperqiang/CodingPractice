@@ -29,17 +29,17 @@ public class ConcreteAggregate<E> implements Aggregate<E> {
      * 迭代器
      */
     private class InnerIterator implements Iterator<E> {
-        private int currentIndex;
+        private int cursor;
 
         @Override
         public boolean hasNext() {
-            return currentIndex < list.size();
+            return cursor < list.size();
         }
 
         @Override
         public E next() {
-            E data = list.get(currentIndex);
-            currentIndex++;
+            E data = list.get(cursor);
+            cursor++;
             return data;
         }
     }
