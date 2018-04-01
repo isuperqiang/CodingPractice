@@ -5,7 +5,7 @@ package com.richie.learning.design_pattern.state;
  */
 public interface ILightState {
     /**
-     * 行为
+     * 行为表示
      */
     void behave();
 }
