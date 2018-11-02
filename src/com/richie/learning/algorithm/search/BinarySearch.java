@@ -30,19 +30,19 @@ public class BinarySearch {
         return -1;
     }
 
-    static int searchRecursive(int key, int[] array) {
-        return search(key, 0, array.length - 1, array);
+    // 递归实现
+    private static int searchRecursive(int key, int[] array) {
+        return searchRecursiveInternal(key, 0, array.length - 1, array);
     }
 
-    // 递归实现
-    private static int search(int key, int low, int high, int[] array) {
+    private static int searchRecursiveInternal(int key, int low, int high, int[] array) {
         int mid = (low + high) / 2;
         if (key < array[mid]) {
             high = mid - 1;
-            return search(key, low, high, array);
+            return searchRecursiveInternal(key, low, high, array);
         } else if (key > array[mid]) {
             low = mid + 1;
-            return search(key, low, high, array);
+            return searchRecursiveInternal(key, low, high, array);
         } else {
             return mid;
         }
