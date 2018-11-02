@@ -2,6 +2,7 @@ package com.richie.learning.algorithm.search;
 
 /**
  * @author Richie on 2018.03.04
+ * 二分查找
  */
 public class BinarySearch {
 
@@ -18,7 +19,7 @@ public class BinarySearch {
         int low = 0;
         int high = array.length - 1;
         while (low <= high) {
-            int mid = (low + high) / 2;
+            int mid = low + ((high - low) >> 1);
             if (key < array[mid]) {
                 high = mid - 1;
             } else if (key > array[mid]) {
@@ -36,13 +37,11 @@ public class BinarySearch {
     }
 
     private static int searchRecursiveInternal(int key, int low, int high, int[] array) {
-        int mid = (low + high) / 2;
+        int mid = low + ((high - low) >> 1);
         if (key < array[mid]) {
-            high = mid - 1;
-            return searchRecursiveInternal(key, low, high, array);
+            return searchRecursiveInternal(key, low, mid - 1, array);
         } else if (key > array[mid]) {
-            low = mid + 1;
-            return searchRecursiveInternal(key, low, high, array);
+            return searchRecursiveInternal(key, mid + 1, high, array);
         } else {
             return mid;
         }
