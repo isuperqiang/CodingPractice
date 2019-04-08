@@ -1,4 +1,4 @@
-package com.richie.coding.algorithm.stack;
+package com.richie.coding.data_structure.stack;
 
 /**
  * @author Richie on 2018.03.21

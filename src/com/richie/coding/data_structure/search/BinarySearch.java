@@ -1,4 +1,4 @@
-package com.richie.coding.algorithm.search;
+package com.richie.coding.data_structure.search;
 
 /**
  * @author Richie on 2018.03.04

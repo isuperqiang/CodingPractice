@@ -1,4 +1,4 @@
-package com.richie.coding.algorithm.stack;
+package com.richie.coding.data_structure.stack;
 
 import java.util.EmptyStackException;
 import java.util.Iterator;

@@ -1,4 +1,4 @@
-package com.richie.coding.algorithm.queue;
+package com.richie.coding.data_structure.queue;
 
 /**
  * @author Richie on 2018.03.23

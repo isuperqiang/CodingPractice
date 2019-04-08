@@ -1,4 +1,4 @@
-package com.richie.coding.algorithm.sort;
+package com.richie.coding.data_structure.sort;
 
 import java.util.Arrays;
 

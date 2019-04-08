@@ -1,4 +1,4 @@
-package com.richie.coding.algorithm.queue;
+package com.richie.coding.data_structure.queue;
 
 import java.util.Iterator;
 import java.util.NoSuchElementException;
