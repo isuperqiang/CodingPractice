@@ -10,8 +10,10 @@ public class LinkedListTest {
         // 1->2->3->4->5->NULL
         ListNode listNode = initListNode();
         printListNode(listNode);
-        ListNode reverseList = reverseList(listNode);
-        printListNode(reverseList);
+        //ListNode reverseList = reverseList(listNode);
+        //printListNode(reverseList);
+        ListNode midNode = findMidNode(listNode);
+        System.out.println("mid " + midNode);
     }
 
     private static ListNode initListNode() {
@@ -31,6 +33,20 @@ public class LinkedListTest {
             temp = temp.next;
         }
         System.out.println(sb);
+    }
+
+    private static ListNode findMidNode(ListNode listNode) {
+        if (listNode == null) {
+            return null;
+        }
+
+        ListNode slow = listNode;
+        ListNode fast = listNode;
+        while (fast != null && fast.next != null) {
+            fast = fast.next.next;
+            slow = slow.next;
+        }
+        return slow;
     }
 
     /**
