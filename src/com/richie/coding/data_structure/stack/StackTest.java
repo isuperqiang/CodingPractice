@@ -7,8 +7,8 @@ package com.richie.coding.data_structure.stack;
 public class StackTest {
 
     public static void main(String args[]) {
-        //testStackLink();
-        //testStackArray();
+        testLinkStack();
+        testArrayStack();
         testBrowser();
     }
 
@@ -28,8 +28,8 @@ public class StackTest {
         browserForwardBackward.forward();
     }
 
-    private static void testStackArray() {
-        MyStackByArray<Integer> myStackByArray = new MyStackByArray<>();
+    private static void testArrayStack() {
+        StackByArray<Integer> myStackByArray = new StackByArray<>();
         for (int i = 0; i < 6; i++) {
             myStackByArray.push(i);
         }
@@ -40,8 +40,8 @@ public class StackTest {
         System.out.println(myStackByArray);
     }
 
-    private static void testStackLink() {
-        MyStackByList<Integer> myStackByLink = new MyStackByList<>();
+    private static void testLinkStack() {
+        StackByLink<Integer> myStackByLink = new StackByLink<>();
         for (int i = 0; i < 6; i++) {
             myStackByLink.push(i);
         }

@@ -7,7 +7,7 @@ import java.util.Iterator;
  * @author Richie on 2018.03.23
  * 双向链表实现的栈
  */
-public class MyStackByList<E> implements Iterable<E> {
+public class StackByLink<E> implements Iterable<E> {
 
     private int size;
     private Node first;

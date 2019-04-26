@@ -7,16 +7,16 @@ import java.util.Iterator;
  * @author Richie on 2018.03.21
  * 数组实现的栈
  */
-public class MyStackByArray<E> implements Iterable<E> {
+public class StackByArray<E> implements Iterable<E> {
 
     private E[] data;
     private int size;
 
-    public MyStackByArray() {
+    public StackByArray() {
         this(8);
     }
 
-    public MyStackByArray(int size) {
+    public StackByArray(int size) {
         data = (E[]) new Object[size];
     }
 

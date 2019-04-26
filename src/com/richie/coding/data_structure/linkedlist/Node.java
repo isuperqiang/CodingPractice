@@ -4,38 +4,38 @@ package com.richie.coding.data_structure.linkedlist;
  * @author richie on 2019.04.17
  * 链表结点
  */
-class Node<T> {
+class Node<E> {
     private Node pre;
     private Node next;
-    private T value;
+    private E value;
 
-    public Node(Node pre, Node next, T value) {
+    public Node(Node pre, Node next, E value) {
         this.pre = pre;
         this.next = next;
         this.value = value;
     }
 
-    public Node<T> getNext() {
+    public Node<E> getNext() {
         return next;
     }
 
-    public void setNext(Node<T> next) {
+    public void setNext(Node<E> next) {
         this.next = next;
     }
 
-    public T getValue() {
+    public E getValue() {
         return value;
     }
 
-    public void setValue(T value) {
+    public void setValue(E value) {
         this.value = value;
     }
 
-    public Node<T> getPre() {
+    public Node<E> getPre() {
         return pre;
     }
 
-    public void setPre(Node<T> pre) {
+    public void setPre(Node<E> pre) {
         this.pre = pre;
     }
 

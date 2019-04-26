@@ -5,8 +5,8 @@ package com.richie.coding.data_structure.stack;
  * 模拟实现浏览器的前进、后退功能
  */
 public class BrowserForwardBackward {
-    private MyStackByArray<String> forwardStack = new MyStackByArray<>();
-    private MyStackByArray<String> backwardStack = new MyStackByArray<>();
+    private StackByArray<String> forwardStack = new StackByArray<>();
+    private StackByArray<String> backwardStack = new StackByArray<>();
 
     public void open(String url) {
         forwardStack.push(url);
