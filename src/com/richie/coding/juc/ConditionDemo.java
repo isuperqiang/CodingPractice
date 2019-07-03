@@ -1,4 +1,4 @@
-package com.richie.coding.other;
+package com.richie.coding.juc;
 
 import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.Lock;
