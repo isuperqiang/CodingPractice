@@ -3,8 +3,9 @@ package com.richie.coding.sort;
 import java.util.Arrays;
 
 /**
- * @author richie on 2018.07.15
  * 选择排序
+ *
+ * @author Richie on 2018.07.15
  */
 public class SelectionSort {
     /**

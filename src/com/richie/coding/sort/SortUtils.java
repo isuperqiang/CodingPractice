@@ -1,9 +1,10 @@
 package com.richie.coding.sort;
 
 /**
- * @author richie on 2018.07.15
+ * @author Richie on 2018.07.15
  */
-public class SortUtils {
+public final class SortUtils {
+
     private SortUtils() {
     }
 

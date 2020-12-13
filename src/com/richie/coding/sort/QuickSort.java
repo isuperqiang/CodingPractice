@@ -3,13 +3,11 @@ package com.richie.coding.sort;
 import java.util.Arrays;
 
 /**
- * @author richie on 2018.07.15
  * 快速排序
+ *
+ * @author Richie on 2018.07.15
  */
 public class QuickSort {
-    /**
-     *
-     */
 
     public static void main(String[] args) {
         int[] a = {2, 5, 3, 7, 1, 8};
@@ -28,15 +26,13 @@ public class QuickSort {
                     j--;
                 }
                 if (i < j) {
-                    nums[i] = nums[j];
-                    i++;
+                    nums[i++] = nums[j];
                 }
                 while (i < j && nums[i] < pivot) {
                     i++;
                 }
                 if (i < j) {
-                    nums[j] = nums[i];
-                    j--;
+                    nums[j--] = nums[i];
                 }
             }
             nums[i] = pivot;

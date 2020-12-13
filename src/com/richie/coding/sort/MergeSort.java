@@ -3,13 +3,11 @@ package com.richie.coding.sort;
 import java.util.Arrays;
 
 /**
- * @author richie on 2018.07.17
  * 归并排序
+ *
+ * @author Richie on 2018.07.17
  */
 public class MergeSort {
-    /**
-     *
-     */
 
     public static void main(String[] args) {
         int[] a = {1, 5, 2, 7, 4, 9};
